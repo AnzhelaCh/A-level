@@ -1,0 +1,194 @@
+header {
+    background: orange;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+header li {
+    padding-left: 10px;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container + aside{
+    background: plum;
+    flex-basis: 210px;
+    order: 1;
+    flex-shrink: 0;
+}
+aside + aside{
+    background: silver;
+    flex-basis: 210px;
+    order: 3;
+    flex-shrink: 0;
+}
+
+aside{
+    text-align: center;
+    padding-top: 20px;
+}
+footer {
+    background: aquamarine;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+main {
+    flex-grow: 1;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+.container{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    order: 2;
+    flex-shrink: 1;
+}
+ul.card {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    text-transform: uppercase;
+}
+.card li{
+    width: calc(33.33% - 10px);
+    padding: 15px;
+    border: 2px solid gainsboro;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px 15px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.card li img{
+    width: 94px;
+    border: 10px solid gray;
+    border-radius: 50%;
+}
+.card li a {
+    text-decoration: none;
+    background: blueviolet;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-top: auto;
+}
+.card li a:hover {
+    transition: 0.3s;
+    background: green;
+}
+h3 {
+    margin-bottom: 0;
+}
+header li a {
+    text-decoration: none;
+    color: black;
+}
+header li a:hover {
+    transition: 0.3s;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.card li:hover{
+    transition: 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+#menu__toggle {
+    opacity: 0;
+    position: absolute;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 73px;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: orange;
+    transition: 0.3s;
+}
+
+.menu__item {
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: left;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}

@@ -1,0 +1,36 @@
+.home-work{
+    box-sizing: border-box;
+    width: 350px;
+    height: 220px;
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 30px;
+    border: 2px dotted red;
+    background: green;
+}
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.container .hw-html {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    max-width: 250px;
+    float: left;
+}
+.container img.hw-js {
+    max-width: 200px;
+    margin: 15px 0 15px 15px;
+    float: right;
+}
+.container p {
+    text-align: justify;
+}
+.task-1{
+    width: 250px;
+    height: 250px;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid blue;
+    background: aqua;
+    box-sizing: border-box;
+}
